@@ -7,7 +7,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class RestService {
-
   xAuthToken = null;
   boardId = null;
 
@@ -19,31 +18,34 @@ export class RestService {
       board_name: boardTitle,
       board_data: boardData
     };
-    this.http.post(environment.apiHost + '/api/v1/user/save/board', body, {
-      headers: new HttpHeaders({
-        'X-AUTH-TOKEN': this.xAuthToken
+    this.http
+      .post(environment.apiHost + '/api/v1/user/save/board', body, {
+        headers: new HttpHeaders({
+          'X-AUTH-TOKEN': this.xAuthToken
+        })
       })
-    }).subscribe( res => {
-      console.log(res);
-      this.boardId = JSON.parse(JSON.stringify(res)).board_id;
+      .subscribe((res) => {
+        console.log(res);
+        this.boardId = JSON.parse(JSON.stringify(res)).board_id;
 
-      // this.getBoardData(this.boardId)
-    });
+        // this.getBoardData(this.boardId)
+      });
 
-    console.log(this.boardId,"THIS ");
-
+    console.log(this.boardId, 'THIS ');
   }
 
   getBoardData(boardId) {
-    console.log("Inside get",this.boardId);
+    console.log('Inside get', this.boardId);
 
     this.xAuthToken = localStorage.getItem('token');
-    this.http.get(environment.apiHost + `/api/v1/user/get/board?board_id=${boardId}`, {
-      headers: new HttpHeaders({
-        'X-AUTH-TOKEN': this.xAuthToken
+    this.http
+      .get(environment.apiHost + `/api/v1/user/get/board?board_id=${boardId}`, {
+        headers: new HttpHeaders({
+          'X-AUTH-TOKEN': this.xAuthToken
+        })
       })
-    }).subscribe( res => {
+      .subscribe((res) => {
         console.log(res);
-    });
+      });
   }
 }

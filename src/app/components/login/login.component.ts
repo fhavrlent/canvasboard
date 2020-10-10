@@ -7,20 +7,17 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   emailId = '';
   password = '';
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login(): any {
-    this.authService.loginReqObj  = {};
+    this.authService.loginReqObj = {};
     this.authService.loginReqObj.email_id = this.emailId;
     this.authService.loginReqObj.password = this.password;
     this.authService.login();
   }
-
 }

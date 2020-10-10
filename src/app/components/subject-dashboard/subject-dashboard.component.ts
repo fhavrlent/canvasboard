@@ -6,16 +6,14 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./subject-dashboard.component.scss']
 })
 export class SubjectDashboardComponent implements OnInit {
-
-  constructor(
-     ) { }
+  constructor() {}
   user = 'teacher';
   imageInfo: any;
 
-  @ViewChild('uploadContent', { read: ElementRef, static: false }) uploadContent: ElementRef;
+  @ViewChild('uploadContent', { read: ElementRef, static: false })
+  uploadContent: ElementRef;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   uploading() {
     this.uploadContent.nativeElement.click();
@@ -26,9 +24,8 @@ export class SubjectDashboardComponent implements OnInit {
     const fileReader = new FileReader();
   }
 
-uploadNewCourseContent(imageInput: any) {
-  const file = imageInput.files[0];
-  const fileReader = new FileReader();
-}
-
+  uploadNewCourseContent(imageInput: any) {
+    const file = imageInput.files[0];
+    const fileReader = new FileReader();
+  }
 }

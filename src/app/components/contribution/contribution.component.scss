@@ -3,16 +3,16 @@
   .cb-image {
     width: 100%;
   }
-    .links{
+  .links {
     width: 100%;
     text-align: center;
     // border: 1px solid red;
-    ul{
+    ul {
       margin: 2px auto;
       line-height: 1.4;
       padding-left: 0;
     }
-    li{
+    li {
       display: inline;
       text-align: center;
       margin-left: 1rem;
@@ -20,23 +20,23 @@
       padding-top: 0.5rem;
     }
   }
-  .header{
+  .header {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 2rem;
 
     span {
-      color: #EE6D9E;
+      color: #ee6d9e;
     }
   }
 
-  .cb-contribute{
+  .cb-contribute {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     line-height: 31px;
   }
 
-  .cb-github{
+  .cb-github {
     img {
       width: 20%;
     }

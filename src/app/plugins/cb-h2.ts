@@ -1,12 +1,11 @@
 declare var $: any;
 
 export class AddH2Component {
-  constructor(){}
+  constructor() {}
 
-    // H2 Tag HTML
-    addH2TagHTMLCode = (uid) => {
-
-      $(`#cb-buttons-${uid}`).append(`
+  // H2 Tag HTML
+  addH2TagHTMLCode = (uid) => {
+    $(`#cb-buttons-${uid}`).append(`
       <!-- h2 tag -->
       <div class="tool box2 m-1">
         <button class="btn btn-light" id="add-h2-box2-${uid}">
@@ -17,16 +16,16 @@ export class AddH2Component {
           </svg>
         </button>
       </div>
-      `)
-    }
-    // Add H2 tag click action
-    addH2TagClickFunction = (uid) => {
-      $(`#add-h2-box2-${uid}`).click(() => {
-        $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H3').addClass('cb-H2');
-      });
-    }
-
-    addH2TagToolBox = (uid) => {
+      `);
+  };
+  // Add H2 tag click action
+  addH2TagClickFunction = (uid) => {
+    $(`#add-h2-box2-${uid}`).click(() => {
       $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H3').addClass('cb-H2');
-    }
+    });
+  };
+
+  addH2TagToolBox = (uid) => {
+    $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H3').addClass('cb-H2');
+  };
 }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
   signUpLoad = false;
@@ -75,16 +75,24 @@ export class AuthService {
     }
   }
 
-  loginErrorAlert({ error }: ErrorEvent) {
-    if (error.message === "Please verify your email-id") {
-      Swal.fire({ icon: 'warning', text: "Please verify your email account for sign in" });
-    } else if (error.message === "Incorrect password") {
-      Swal.fire({ icon: 'error', text: "Incorrect username or password."});
-    } else if (error.message === "User not found.") {
-      Swal.fire({ 
-        icon: 'warning',
-        text: "This email address does not correspond to a registered account."
-      });
+  loginErrorAlert({ error: { message } }: ErrorEvent) {
+    switch (message) {
+      case 'Please verify your email-id':
+        Swal.fire({
+          icon: 'warning',
+          text: 'Please verify your email account for sign in'
+        });
+        break;
+      case 'Incorrect password':
+        Swal.fire({ icon: 'error', text: 'Incorrect username or password.' });
+        break;
+      default:
+        Swal.fire({
+          icon: 'warning',
+          text:
+            'This email address does not correspond to a registered account.'
+        });
+        break;
     }
   }
 }

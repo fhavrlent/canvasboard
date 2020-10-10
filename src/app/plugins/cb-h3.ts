@@ -3,7 +3,7 @@ declare var $: any;
 export class AddH3Component {
   constructor() {}
 
-  //h3 tag
+  // h3 tag
   addH3TagHTMLCode = (uid) => {
     $(`#cb-buttons-${uid}`).append(`
     <!-- h3 tag -->
@@ -16,16 +16,16 @@ export class AddH3Component {
         </svg>
       </button>
     </div>
-    `)
-  }
+    `);
+  };
 
   addH3TagClickFunction = (uid) => {
     $(`#add-h3-box2-${uid}`).click(() => {
       $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H2').addClass('cb-H3');
     });
-  }
+  };
 
   addH3TagToolBox = (uid) => {
     $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H2').addClass('cb-H3');
-  }
+  };
 }

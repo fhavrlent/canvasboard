@@ -38,15 +38,10 @@ import { FilesComponent } from './components/files/files.component';
     NewBoardComponent,
     UserDashboardComponent,
     ContributionComponent,
-    FilesComponent,
+    FilesComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

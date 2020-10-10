@@ -7,16 +7,14 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   userName = '';
   instituteName = '';
   email = '';
   password = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   signUp(): any {
     this.authService.signUpReqObj = {};
@@ -26,5 +24,4 @@ export class SignUpComponent implements OnInit {
     this.authService.signUpReqObj.institute_name = this.instituteName;
     this.authService.signUp();
   }
-
 }

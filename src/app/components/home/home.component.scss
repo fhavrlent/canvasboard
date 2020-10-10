@@ -1,19 +1,18 @@
-.container{
-
+.container {
   .cb-image {
     width: 100%;
   }
 
-  .links{
+  .links {
     width: 100%;
     text-align: center;
     // border: 1px solid red;
-    ul{
+    ul {
       margin: 2px auto;
       line-height: 1.4;
       padding-left: 0;
     }
-    li{
+    li {
       display: inline;
       text-align: center;
       margin-left: 1rem;
@@ -22,54 +21,53 @@
     }
   }
 
-  .header{
+  .header {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 42px;
 
     @media (min-width: 768px) {
-        font-size: 60px;
+      font-size: 60px;
     }
   }
 
-
-  .sub-header{
+  .sub-header {
     font-family: 'Questrial', sans-serif;
     font-size: 24px;
     line-height: 31px;
 
     @media (min-width: 768px) {
       font-size: 30px;
+    }
+    .webboard {
+      color: #ee6d9e;
+      font-weight: bold;
+    }
+    .Schools {
+      color: #1551ec;
+      font-weight: bold;
+    }
+    .Colleges {
+      color: #5217f9;
+      font-weight: bold;
+    }
+    .Universities {
+      color: #9513e4;
+      font-weight: bold;
+    }
   }
-    .webboard{
-      color: #EE6D9E;
-      font-weight: bold;
-    }
-    .Schools{
-      color: #1551EC;
-      font-weight: bold;
-    }
-    .Colleges{
-      color: #5217F9;
-      font-weight: bold;
-    }
-    .Universities{
-      color: #9513E4;
-      font-weight: bold;
-    }
-  }
-  .board{
+  .board {
     width: 90%;
     margin-top: 70px;
   }
 
-  .features{
+  .features {
     margin-top: 100px;
-    .pdf-img{
+    .pdf-img {
       width: 50%;
     }
-    .feature1-heading{
-      color: #EE6D9E;
+    .feature1-heading {
+      color: #ee6d9e;
       font-family: Poppins;
       font-weight: bold;
       font-size: 30px;

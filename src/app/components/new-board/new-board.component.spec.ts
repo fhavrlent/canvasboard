@@ -8,9 +8,8 @@ describe('NewBoardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewBoardComponent ]
-    })
-    .compileComponents();
+      declarations: [NewBoardComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

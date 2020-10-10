@@ -1,7 +1,7 @@
 declare var $: any;
 
 export class AddParaComponent {
-  constructor(){}
+  constructor() {}
 
   addParaTagHTMLCode = (uid) => {
     $(`#cb-buttons-${uid}`).append(`
@@ -15,17 +15,17 @@ export class AddParaComponent {
         </svg>
       </button>
     </div>
-    `)
-  }
+    `);
+  };
 
   addParaTagClickFunction = (uid) => {
     // Adding Paragraphs
     $(`#add-p-box2-${uid}`).click(() => {
       $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H2 cb-H3');
     });
-  }
+  };
 
   addParaTagToolBox = (uid) => {
     $(`#cb-box-2-${uid}`).removeClass('cb-H1 cb-H2 cb-H3');
-  }
+  };
 }

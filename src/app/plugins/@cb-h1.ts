@@ -1,16 +1,13 @@
 declare var $: any;
 
 export class AddH1Component {
+  constructor() {}
 
-  constructor(){
+  // H1 Tag
+  addH1TagHTMLCode(uid) {
+    console.log('Calling h1 html');
 
-  }
-
-    //H1 Tag
-    addH1TagHTMLCode(uid){
-      console.log("Calling h1 html");
-
-      $(`#cb-buttons-${uid}`).append(`
+    $(`#cb-buttons-${uid}`).append(`
       <!-- H1 tag -->
       <div class="tool box1 m-1">
         <button class="btn btn-light" id="add-h1-box2-${uid}">
@@ -21,18 +18,17 @@ export class AddH1Component {
           </svg>
         </button>
       </div>
-      `)
-    }
+      `);
+  }
 
-    addH1TagClickFunction = (uid) => {
-        // Adding H1 Tags
-        $(`#add-h1-box2-${uid}`).click(() => {
-          $(`#cb-box-2-${uid}`).removeClass('cb-H2 cb-H3').addClass('cb-H1');
-        });
-    }
-
-    addH1TagToolBox = (uid) => {
+  addH1TagClickFunction = (uid) => {
+    // Adding H1 Tags
+    $(`#add-h1-box2-${uid}`).click(() => {
       $(`#cb-box-2-${uid}`).removeClass('cb-H2 cb-H3').addClass('cb-H1');
-    }
+    });
+  };
 
+  addH1TagToolBox = (uid) => {
+    $(`#cb-box-2-${uid}`).removeClass('cb-H2 cb-H3').addClass('cb-H1');
+  };
 }
